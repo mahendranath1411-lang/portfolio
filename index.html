@@ -6,7 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark">
     <!-- Scroll Progress Bar -->
     <div id="progressBar"></div>
 
@@ -453,6 +453,11 @@
         document.addEventListener('DOMContentLoaded', () => {
             const initial = (location.hash && location.hash.startsWith('#')) ? location.hash.slice(1) : 'about';
             setActiveNav(initial);
+            // If body starts in dark mode ensure the toggle visual matches
+            if (document.body.classList.contains('dark')) {
+                const tt = document.getElementById('themeToggle');
+                if (tt && !tt.classList.contains('dark')) tt.classList.add('dark');
+            }
         });
 
         // Scrollspy: update active nav while scrolling
