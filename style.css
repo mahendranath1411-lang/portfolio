@@ -123,9 +123,10 @@ header {
     margin: 0 auto;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    min-height: 56px; /* ensure header has enough height for controls */
 }
 
 header.dark {
@@ -220,6 +221,8 @@ nav ul li button:hover {
     z-index: 10;
 }
 
+/* Visit site button removed per request */
+
 .toggle-container.dark {
     background: black;
 }
@@ -243,24 +246,29 @@ nav ul li button:hover {
 .mobile-menu-btn {
     display: none;
     position: absolute;
-    top: 12px;
-    left: 12px;
-    width: 44px;
-    height: 36px;
+    top: 50%;
+    left: 12px; /* position hamburger on the left to avoid clashing with theme toggle */
+    transform: translateY(-50%);
+    width: 46px;
+    height: 40px;
     background: transparent;
     border: none;
     z-index: 1200;
     cursor: pointer;
     padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .mobile-menu-btn .hamburger-line {
     display: block;
-    width: 24px;
-    height: 3px;
-    background: #fff;
+    width: 28px;
+    height: 6px;
+    background: linear-gradient(90deg,#FEBA01 0%, #F5A800 100%);
     margin: 4px 0;
-    border-radius: 3px;
+    border-radius: 6px;
     transition: transform 0.25s ease, opacity 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
 /* Mobile navigation drawer */
@@ -1083,12 +1091,12 @@ footer {
     .about-buttons a { padding: 8px 14px; font-size: 13px; }
 }
 
-@media (max-width: 480px) {
-    /* Mobile phones */
+@media (max-width: 768px) {
+    /* Mobile phones and tablets */
     header { padding: 14px 0; }
     .header-inner { padding: 0 10px; }
     nav ul { gap: 8px; flex-direction: column; align-items: stretch; }
-    /* hide desktop nav and show hamburger */
+    /* hide desktop nav and show hamburger on tablets and smaller */
     nav { display: none; }
     .mobile-menu-btn { display: block; color: #fff; }
     nav ul li button { width: 100%; text-align: center; }
