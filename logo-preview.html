@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio Logo Preview</title>
+  <style>
+    body { font-family: Arial, sans-serif; display:flex; flex-direction:column; align-items:center; gap:18px; padding:32px; background:#f6f7fb;}
+    .frame { background:#fff; padding:24px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.08); }
+    .preview { width:320px; height:320px; display:flex; align-items:center; justify-content:center; }
+    .hint { max-width:760px; font-size:14px; color:#333; }
+    a.button { display:inline-block; padding:10px 14px; background:#00cea8; color:#fff; border-radius:8px; text-decoration:none; font-weight:700 }
+  </style>
+</head>
+<body>
+  <h2>Portfolio logo preview</h2>
+  <div class="frame">
+    <div class="preview">
+      <!-- Embedded SVG: loads the local file so open this page from the repo folder in a browser -->
+      <img src="images/portfolio-logo.svg" alt="Portfolio logo" style="width:280px;height:280px;object-fit:contain;"/>
+    </div>
+  </div>
+
+  <p class="hint">Right-click the logo and choose "Save image as..." to download the SVG. To upload to LinkedIn Featured you should use a PNG (800×800 or 1200×1200). See the instructions below to convert the SVG to PNG on Windows.</p>
+
+  <h3>Convert SVG → PNG (recommended)</h3>
+  <ol class="hint">
+    <li>If you have ImageMagick installed, open PowerShell in this folder and run:<br>
+      <code>magick convert .\\images\\portfolio-logo.svg -resize 1200x1200 .\\images\\portfolio-logo.png</code>
+    </li>
+    <li>If you don't have ImageMagick, use Chrome: open this file in Chrome, right-click the SVG element in DevTools (Elements) and choose "Capture node screenshot" — that saves a PNG at the displayed resolution.</li>
+    <li>Or use an online converter (CloudConvert, svg2png, etc.) and export 1200×1200 PNG.</li>
+  </ol>
+
+  <p class="hint">When you have the PNG, upload it to LinkedIn Featured → Add media → select the PNG file. Title: <strong>My Portfolio</strong>. Description: Personal portfolio showcasing projects and skills.</p>
+
+  <p><a class="button" href="images/portfolio-logo.svg" download>Download SVG</a></p>
+</body>
+</html>
