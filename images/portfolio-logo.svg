@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Portfolio logo: CPK">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Portfolio logo: Mahendranath">
   <defs>
     <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
       <stop offset="0%" stop-color="#00cea8"/>
@@ -26,7 +26,7 @@
   <text x="50%" y="56%" text-anchor="middle" font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="800" font-size="320" fill="#ffffff" letter-spacing="6">CPK</text>
 
   <!-- Subtext (small) -->
-  <text x="50%" y="72%" text-anchor="middle" font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="600" font-size="40" fill="rgba(255,255,255,0.9)">C PAVAN KUMAR</text>
+  <text x="50%" y="72%" text-anchor="middle" font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="600" font-size="40" fill="rgba(255,255,255,0.9)">Mahendranath</text>
 
   <!-- small sparkle accent -->
   <g transform="translate(880,200) rotate(15)">
